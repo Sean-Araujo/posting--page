@@ -85,3 +85,15 @@ form label{
     color: #242300;
     transition: 0.1s;
 }
+
+/* #dark-mode-toggle{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: #242300;
+    color: #5bff15;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+} */

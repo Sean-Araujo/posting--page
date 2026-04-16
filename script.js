@@ -49,6 +49,7 @@ form.addEventListener("submit", event => {
 
     API.post("", data)
     .then(response => {
+        data.innerHTML = data.title + "<br>" + data.body;
         console.log("Post criado:", response);
         form.reset();
     })

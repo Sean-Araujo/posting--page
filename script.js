@@ -24,14 +24,19 @@ class FetchWrapper {
         return fetch(this.baseURL + endpoint, {
             method,
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json; charset=UTF-8"
             },
             body: JSON.stringify(body)
         }).then(response => response.json());
     }
 }
 
-const api = new FetchWrapper('https://jsonplaceholder.typicode.com/posts');
+const API = new FetchWrapper('https://jsonplaceholder.typicode.com/posts');
+
+const form = document.querySelector("#post-form");
+
+const titulo = document.querySelector("#title");
+const conteudo = document.querySelector("#paragraph");
 
 const data = {
         title: titulo.value,
@@ -39,14 +44,15 @@ const data = {
         userId:1
     }
 
-const form = document.querySelector("#post-form");
-
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", event => {
     event.preventDefault();
-    const titulo = document.querySelector("#title");
-    const conteudo = document.querySelector("#paragraph");
 
-    api.post("", data)
-    .then(response => console.log(response))
-    .catch(error => console.error(error));
+    API.post("", data)
+    .then(response => {
+        console.log("Post criado:", response);
+        form.reset();
+    })
+    .catch(error => {
+        console.error("Erro ao criar post:", error);
+    });
 });

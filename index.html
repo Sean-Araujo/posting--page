@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Post de blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div>
-        <h1>Crie seu post</h1></div>
+        
         <form id="post-form">
-            <input id="title" type="text" placeholder="Título do post">
-            <textarea id="paragraph" placeholder="Conteúdo do post"></textarea>
-            <button type="submit">Publicar</button>
+            <h1>Crie seu post</h1>
+
+            <p>---------------------------------------</p>
+            
+            <label for="title">Título</label>
+            <input id="title" type="text" placeholder="Título do post" alt="Criar o título do post">
+
+            <label for="paragraph">Conteúdo</label>
+            <textarea id="paragraph" placeholder="Escreva seu post..." alt="Criar o conteúdo do post"></textarea>
+
+            <p>---------------------------------------</p>
+
+            <button id="submit-btn" type="submit">Publicar</button>
         </form>
     </div>
 </body>

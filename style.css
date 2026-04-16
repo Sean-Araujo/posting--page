@@ -5,3 +5,83 @@
     font-family: Inter, sans-serif;
     box-sizing: border-box;
 }
+
+div{
+    margin-top: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: #fff9f3;
+}
+
+form h1{
+    font-style: italic;
+    display: flex;
+    letter-spacing: -1%;
+    margin: 16 24px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+form{
+    background-color: #ffffcf;
+    border: 2px solid #242300;
+    border-radius: 18px;
+    padding: 24px 24px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 8px 8px 0px #242300;
+}
+
+form label{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#title, #paragraph{
+    border: 2px solid #242300;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+#paragraph{
+    resize: none;
+    height: 240px;
+}
+
+#submit-btn{
+    letter-spacing: 1.5%;
+    background-color: #5bff15;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#submit-btn:hover{
+    color: #5bff15;
+    background-color: #242300;
+    transition: 0.3s;
+}
+
+#submit-btn:active{
+    background-color: #52e314;
+    color: #242300;
+    transition: 0.1s;
+}
